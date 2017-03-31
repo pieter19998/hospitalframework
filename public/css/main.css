@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+	
+}
+body {
+	margin : 0 auto;
+	width : 700px;
+	background-image: url("img/bg.jpg");
+}
+
+h1{
+	color: white;
+}
+
+table {
+	width : 700px;
+}
+
+th {
+	border : 1px #ddd solid;
+	border-collapse : collapse;
+	background-color: #ABC8E2;
+	color : black;
+}
+
+td, th {
+	padding : 2px;
+}
+
+td{
+	background-color: #C4D7ED;
+}
+
+th {
+	text-align : left;
+}
+
+td.center{
+	text-align : center;
+}
+
+a {
+	color : black;
+}
+p.options{
+	text-align : right;
+}
+
+label {
+	display : inline-block;
+	width : 100px;
+}
+form div {
+	margin: 5px 0;
+}
