@@ -29,4 +29,15 @@ function CreateLogin()
     header("Location:" . URL . "login/index");
 }
 
+function CheckLogin()
+{
+    // haal het formulier op en suur naar de createclient om het in de database op te slaan
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        login($_POST['username'], $_POST['password']);
+    }
+
+    header("Location:" . URL . "login/index");
+}
+
+
 ?>

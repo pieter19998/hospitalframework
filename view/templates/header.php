@@ -17,3 +17,13 @@
     <a href="<?= URL ?>species/index">species</a>
 </nav>
 <body>
+
+
+<?php
+
+
+if($user->is_loggedin()!="")
+{
+$user->redirect('home.php');
+}
+?>

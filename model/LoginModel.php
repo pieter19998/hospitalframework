@@ -23,13 +23,13 @@ function register($name,$lastname,$username,$password,$email)
 }
 
 
-function login($username,$email,$password)
+function login($username,$password)
 {
     try {
         $db = openDatabaseConnection();
-        $sql = ("SELECT * FROM account WHERE username=:username OR email=:email LIMIT 1");
+        $sql = ("SELECT * FROM account WHERE username=:username LIMIT 1");
         $query = $db->prepare($sql);
-        $query->execute(array(':username' => $username, ':email' => $email));
+        $query->execute(array(':username' => $username));
         $row = $query->fetch(PDO::FETCH_ASSOC);
         if ($query->rowCount() > 0) {
             if (password_verify($password, $row['password'])) {
@@ -59,3 +59,4 @@ function login($username,$email,$password)
          return true;
      }
  }
+

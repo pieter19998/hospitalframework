@@ -1,5 +1,5 @@
 <h1>Login</h1>
-<form action="<?= URL ?>login/Login" method="post">
+<form action="<?= URL ?>login/CheckLogin" method="post">
 <label>username</label>
 <input type="text" placeholder="username" minlength="1"/>
     <br>
